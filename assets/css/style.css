@@ -21,6 +21,21 @@ a {
   text-decoration: none;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2{
+  -webkit-line-clamp: 2;
+}
+
+.break-all{
+  word-break: break-all;
+}
+
 .heading-lv2 {
   color: #171100;
   font-family: var(--font-heading);
@@ -325,6 +340,7 @@ a {
 }
 
 .courses-list .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
