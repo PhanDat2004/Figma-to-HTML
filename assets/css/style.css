@@ -32,6 +32,7 @@ a {
 
 .btn {
   display: inline-block;
+  border: none;
   min-width: 118px;
   padding: 0 16px;
   line-height: 50px;
@@ -44,6 +45,7 @@ a {
 }
 
 .btn:hover {
+  cursor: pointer;
   opacity: 0.9;
 }
 
@@ -87,7 +89,6 @@ a {
 .nav li.active a,
 .nav a:hover {
   color: #171100;
-  /* font-weight: 600; */
   text-shadow: 1px 0 0 currentColor;
 }
 
@@ -288,9 +289,9 @@ a {
 .popular-top .desc {
   width: 458px;
   margin-top: 16px;
-  color: #5F5B53;
+  color: #5f5b53;
   font-size: 1.8rem;
-  line-height: 1.67; 
+  line-height: 1.67;
 }
 
 .popular .controls {
@@ -313,5 +314,80 @@ a {
 .popular .control-btn:hover {
   color: #fff;
   cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+/* ============ course =========== */
+.popular .courses-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 55px;
+}
+
+.courses-list .course-item {
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+  background: #fff;
+}
+
+.courses-list .course-item:hover {
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular .course-item .thumb {
+  border-radius: 12px 12px 0px 0px;
+  height: 278px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.popular .course-item .course-info {
+  padding: 16px 22px 22px;
+}
+
+.popular .course-info .course-head,
+.popular .course-info .course-raiting,
+.popular .course-info .course-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular .course-info .title a {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66;
+}
+
+.popular .course-info .value {
+  margin-left: 6px;
+  color: #fea31b;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.popular .course-info .desc {
+  margin-top: 6px;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.85;
+}
+
+.popular .course-info .course-foot {
+  margin-top: 12px;
+}
+
+.popular .course-foot .course-price {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66;
+}
+
+.popular .course-foot .btn-book:hover {
   background-color: var(--primary-color);
 }
