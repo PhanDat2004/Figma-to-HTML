@@ -568,12 +568,14 @@ a {
 .blog-list {
   display: flex;
   gap: 30px;
+  overflow: hidden;
 }
 
 .blog-item {
-  width: calc(100% / 3);
+  width: calc(100% / 3 - 20px);
   border-radius: 16px;
   background: #fff;
+  flex-shrink: 0;
 }
 
 .blog-item:hover {
@@ -623,7 +625,7 @@ a {
 }
 
 .blog-info__title {
-  padding-top: 12px;
+  margin-top: 4px;
   color: #171100;
   font-size: 1.6rem;
   font-weight: 600;
@@ -632,8 +634,29 @@ a {
 
 .blog-info .btn {
   margin-top: 12px;
+  font-size: 1.4rem;
 }
 
 .blog-info .btn:hover {
+  background-color: var(--primary-color);
+}
+
+.blog-foot {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.blog-foot__dots {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #5f5b53;
+  cursor: pointer;
+}
+
+.blog-foot__dots.active {
+  cursor: default;
   background-color: var(--primary-color);
 }
